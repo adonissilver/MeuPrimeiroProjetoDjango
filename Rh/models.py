@@ -42,4 +42,8 @@ class Funcionario(models.Model):
     salario=models.DecimalField(max_digits=10,decimal_places=2)
     data_nascimento=models.DateField(null=True)
 
+    #Para ordenarmos os nomes dos funcionarios por ordem de inserçao,atualmente está aparecendo o ultimo inserido como o primeiro da lista
+    class Meta():
+        ordering=['nome']
+
 
