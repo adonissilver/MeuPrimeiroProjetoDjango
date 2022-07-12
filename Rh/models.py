@@ -2,7 +2,7 @@ from mailbox import NotEmptyError
 from random import choice
 from django.db import models
 
-# Testando Conflitos
+# Crie seus modelos aqui.
 
 
 #class Departamento(Herança)
@@ -41,5 +41,9 @@ class Funcionario(models.Model):
     departamento=models.ForeignKey(Departamento,on_delete=models.CASCADE)
     salario=models.DecimalField(max_digits=10,decimal_places=2)
     data_nascimento=models.DateField(null=True)
+
+    #Para ordenarmos os nomes dos funcionarios por ordem de inserçao,atualmente está aparecendo o ultimo inserido como o primeiro da lista
+    class Meta():
+        ordering=['nome']
 
 
