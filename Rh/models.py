@@ -2,7 +2,7 @@ from mailbox import NotEmptyError
 from random import choice
 from django.db import models
 
-# Create your models here.
+# Testando Conflitos
 
 
 #class Departamento(Herança)
